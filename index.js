@@ -9,6 +9,8 @@ const circle = document.querySelector(".supporter .mouseImg .circle");
 const circleBig = document.querySelector(".supporter .mouseImg .circleBig");
 const circleSmall = document.querySelector(".supporter .mouseImg .circleSmall");
 
+AOS.init();
+
 // a 새로고침 방지
 as.forEach(a => {
   a.addEventListener("click", e => {
@@ -59,7 +61,7 @@ const mainSwiper = new Swiper('.mySwiper', {
     autoplay: {
       delay: 2000,
     }
-  });
+});
 
 // supporter 마우스 좌표
 addEventListener("mousemove", (e) => {

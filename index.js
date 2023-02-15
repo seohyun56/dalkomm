@@ -4,6 +4,10 @@ const as = document.querySelectorAll("a");
 const nav = document.querySelector("nav");
 const lastMenu = document.querySelector(".gnb > li:last-child");
 const gnbHover = document.querySelector("nav .gnbHover");
+// supporter
+const circle = document.querySelector(".supporter .mouseImg .circle");
+const circleBig = document.querySelector(".supporter .mouseImg .circleBig");
+const circleSmall = document.querySelector(".supporter .mouseImg .circleSmall");
 
 // a 새로고침 방지
 as.forEach(a => {
@@ -13,13 +17,25 @@ as.forEach(a => {
 })
 
 // nav scroll
-addEventListener("scroll", () => {
+addEventListener("scroll", scrolled);
+
+let prevScroll = scrollY;
+function scrolled() {
+  const navHt = nav.offsetHeight;
+  let nowScroll = scrollY;
+  if (prevScroll < nowScroll) {
+    nav.style.top = `-${navHt}px`;
+  } else if (prevScroll >= nowScroll) {
+    nav.style.top = 0;
+  }
+  prevScroll = nowScroll;
+
   if (scrollY > 0) {
     nav.classList.add("on");
   } else {
     nav.classList.remove("on");
   }
-})
+}
 
 // nav 마지막 메뉴에 마우스를 올렸을 때 하단 div opacity 조절
 lastMenu.addEventListener("mouseover", () => {
@@ -44,3 +60,12 @@ const mainSwiper = new Swiper('.mySwiper', {
       delay: 2000,
     }
   });
+
+// supporter 마우스 좌표
+addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+  circle.style.transform = `translate(${x / 20}px, ${y / 40}px)`; // 브라우저 크기에서 나눈 크기만큼만 이동
+  circleBig.style.transform = `translate(${x / 40}px, ${y / 70}px)`;
+  circleSmall.style.transform = `translate(${x / 40}px, ${y / 20}px)`;
+})

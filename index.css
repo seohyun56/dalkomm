@@ -272,17 +272,11 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     position: absolute;
     top: 20%; left: -7%;
 }
-/* .imgAnimation .imgAni2 svg {
-    top: -45px; left: 14px;
-} */
 .imgAnimation .imgAni3 {
     width: 270px; height: 270px;
     position: absolute;
     bottom: 7.5%; right: 18.5%;
 }
-/* .imgAnimation .imgAni3 svg {
-    top: -20px; left: 20px;
-} */
 
 /* dalkomm video */
 .dalkommVideo {
@@ -311,6 +305,9 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     display: flex;
     justify-content: space-between;
 }
+.dalkommStory ul li {
+    cursor: pointer;
+}
 .dalkommStory ul li .storyImg {
     width: 460px; height: 460px;
     overflow: hidden;
@@ -319,7 +316,7 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     transition: 0.8s;
 }
 .dalkommStory ul li:hover .storyImg img {
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 .dalkommStory ul li .storyTxt {
     padding-top: 50px;
@@ -347,7 +344,7 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
 .imgMove {
     background-color: #FBF4E4;
     text-align: center;
-    color: #F43B00;
+    color: #f43b00;
     padding-top: 196px;
 }
 .imgMove h2 {
@@ -375,10 +372,10 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     bottom: 0;
 }
 .imgMove .imgMoving .menu {
-    height: 375px;
+    height: 100%;
     position: absolute;
     left: 0; right: 0;
-    bottom: 0;
+    top: 0; bottom: 0;
     z-index: 2;
     background: url(./images/menu.png) repeat-x left top / auto 375px;
     animation: moving 20s linear infinite;
@@ -388,7 +385,7 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
         background-position: 0 0;
     }
     100% {
-        background-position: 3500px 0;
+        background-position: 3567px 0;
     }
 }
 
@@ -434,7 +431,7 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     width: 100%;
 }
 .newDalkomm .imgContainer {
-    margin: 0 auto;
+    margin: 70px auto;
     position: relative;
     width: 475px; height: 730px;
     padding: 70px 110px 0 113px;
@@ -525,16 +522,36 @@ footer {
     margin-top: 32px;
 }
 .footer1 .service li .serviceDetail li a {
+    display: inline-block;
     font-weight: 400;
     font-size: 16px;
     padding-bottom: 16px;
     color: rgba(34, 34, 34, 0.7);
+    position: relative;
+}
+.footer1 .service li .serviceDetail li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: 15px;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: top right;
+    background-color: #222;
+    transition: transform 0.7s ease-in-out;
 }
 .footer1 .service li .serviceDetail li a:hover {
     color: rgb(34, 34, 34);
 }
+.footer1 .service li .serviceDetail li a:hover::before {
+    transform: scale(1);
+    transform-origin: top left;
+}
 .footer1 .service li:first-child .serviceDetail li:first-child a {
     color: #F43B00;
+}
+.footer1 .service li:first-child .serviceDetail li:first-child a::before {
+    background-color: #F43B00;
 }
 .footer2 {
     padding-top: 35px;

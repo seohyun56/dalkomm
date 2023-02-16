@@ -10,6 +10,8 @@ const swiperContents = document.querySelector(".swiperContainer .Swiper .swiper-
 const circle = document.querySelector(".supporter .mouseImg .circle");
 const circleBig = document.querySelector(".supporter .mouseImg .circleBig");
 const circleSmall = document.querySelector(".supporter .mouseImg .circleSmall");
+// footer
+const portfolio = document.querySelector(".footer2 .site p");
 
 // scroll animation 호출
 AOS.init();
@@ -19,6 +21,11 @@ as.forEach(a => {
   a.addEventListener("click", e => {
     e.preventDefault();
   })
+})
+
+// footer 포트폴리오 바로가기 a
+portfolio.addEventListener("click", () => {
+  location.href = "../index.html";
 })
 
 // nav scroll

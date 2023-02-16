@@ -452,6 +452,11 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     font-size: 1.250vw;
     padding: 1.042vw 2.500vw;
     margin-top: 2.083vw;
+    transition: 0.3s;
+}
+.supporter a:hover {
+    background-color: #F43B00;
+    color: #fff;
 }
 .supporter .mouseImg span {
     position: absolute;
@@ -535,7 +540,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-.footer2 .familySite {
+.footer2 .site .familySite {
     width: 15.625vw; height: 4.427vw;
     line-height: 4.427vw;
     font-family: var(--SpoqaHanSansNeo);
@@ -546,8 +551,18 @@ footer {
     background: url(./images/plus.svg) no-repeat 100% 50% / 1.250vw 1.250vw;
     appearance: none;
 }
-.footer2 .familySite option {
+.footer2 .site .familySite option {
     font-weight: 400;
+}
+.footer2 .site p {
+    cursor: pointer;
+    width: 15.625vw; height: 4.427vw;
+    line-height: 4.427vw;
+    font-weight: 700;
+    font-size: 0.938vw;
+    border-bottom: 2px solid #F43B00;
+    margin-top: 1vw;
+    color: #F43B00;
 }
 .footer2 .info .copyright {
     font-weight: 500;

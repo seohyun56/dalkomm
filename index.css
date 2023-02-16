@@ -17,7 +17,7 @@ img {
 
 /* nav */
 nav {
-    height: 6.250vw;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,10 +42,10 @@ nav .gnb > li {
 }
 /* 대메뉴 제목 */
 nav .gnb > li > a {
-    height: 6.250vw;
-    line-height: 6.250vw;
-    padding: 0 2.292vw;
-    font-size: 0.938vw;
+    height: 120px;
+    line-height: 120px;
+    padding: 0 44px;
+    font-size: 18px;
     position: relative;
     transition: 0.3s;
 }
@@ -53,10 +53,10 @@ nav .gnb > li > a::before {
     content: "";
     display: block;
     position: absolute;
-    right: 2.292vw;
-    left: 2.292vw;
+    right: 44px;
+    left: 44px;
     bottom: 0;
-    height: 0.104vw;
+    height: 2px;
     background-color: rgb(255, 89, 46);
     transition: 0.3s;
     transform: scale(0);
@@ -73,10 +73,10 @@ nav .gnb > li > a span {
 nav .gnb > li > a span::after {
     content: "";
     position: absolute;
-    top: 0.208vw;
-    transform: translateX(0.208vw);
-    width: 0.208vw;
-    height: 0.208vw;
+    top: 4px;
+    transform: translateX(4px);
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background-color: rgb(255, 89, 46);
 }
@@ -86,15 +86,15 @@ nav .gnb .subMenu {
     font-weight: 400;
     position: absolute;
     top: 100%;
-    padding: 2.083vw 0 2.083vw 2.292vw;
+    padding: 40px 0 40px 44px;
     transition: 0.3s;
     opacity: 0;
     pointer-events: none;
 }
 nav .gnb .subMenu a {
     transition: 0.3s;
-    font-size: 0.833vw;
-    padding: 0.521vw 0;
+    font-size: 16px;
+    padding: 10px 0;
 }
 nav .gnb .subMenu a:hover {
     color: rgb(255, 89, 46);
@@ -103,7 +103,7 @@ nav .gnbHover {
     width: 100%;
     height: 0;
     position: absolute;
-    top: 6.250vw;
+    top: 120px;
     left: 0;
     z-index: -1;
     transition: 0.3s;
@@ -116,7 +116,7 @@ nav.on .gnbHover {
     pointer-events: all;
 }
 .gnb:hover + .gnbHover {
-    height: 10.417vw;
+    height: 200px;
 }
 
 /* header */
@@ -130,7 +130,6 @@ header .swiper {
 header .swiper-slide {
     text-align: center;
     font-size: 0.938vw;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,7 +158,7 @@ header .swiper-slide .swiperContents a {
     font-family: var(--SpoqaHanSansNeo);
     font-weight: 700;
     display: inline-block;
-    border: 0.052vw solid;
+    border: 1px solid #F43B00;
     font-size: 1.250vw;
     padding: 1.042vw 2.500vw;
     margin-top: 2.083vw;
@@ -205,26 +204,17 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     font-size: 1.042vw;
     color: #F43B00;
 }
-.imgAnimation .imgAni .imgBox {
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.imgAnimation .imgAni .imgBox img {
-    transition: 0.7s;
-}
-.imgAnimation .imgAni:hover .imgBox img {
-    transform: scale(1.1);
+.imgAnimation .imgAni {
+    position: absolute;
 }
 .imgAnimation .imgAni1 {
     width: 25vw; height: 25vw;
-    position: absolute;
     top: 8%; right: -10.5%;
 }
 .imgAnimation .imgAni1 svg {
     position: absolute;
     width: 100%; height: 100%;
-    top: -1.979vw; left: 1.875vw;
+    top: -3vw; left: 3vw;
 }
 .imgAnimation .imgAni1 .aniCircle {
     animation: aniCircle 4s infinite ease-in-out alternate;
@@ -247,13 +237,22 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
 }
 .imgAnimation .imgAni2 {
     width: 21.615vw; height: 21.615vw;
-    position: absolute;
     top: 20%; left: -7%;
 }
 .imgAnimation .imgAni3 {
     width: 14.063vw; height: 14.063vw;
-    position: absolute;
     bottom: 7.5%; right: 18.5%;
+}
+.imgAnimation .imgAni .imgBox {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imgAnimation .imgAni .imgBox img {
+    transition: 0.7s;
+}
+.imgAnimation .imgAni:hover .imgBox img {
+    transform: scale(1.1);
 }
 
 /* dalkomm video */
@@ -276,7 +275,7 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
 .dalkommStory h2 {
     font-family: var(--GoldplayAlt);
     font-size: 4.375vw;
-    margin-bottom: 2.604vw;
+    margin-bottom: 4vw;
     text-align: center;
 }
 .dalkommStory ul {
@@ -308,9 +307,6 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
     font-size: 2.344vw;
     font-weight: 700;
     margin-top: 1.042vw;
-    /* width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 }
 .dalkommStory ul li .storyTxt h4 {
     font-size: 1.042vw;
@@ -393,7 +389,10 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
 .newDalkomm ul li {
     width: 6.875vw; height: 9.740vw;
 }
-.newDalkomm ul li:nth-child(odd) {
+.newDalkomm ul li:nth-child(1), 
+.newDalkomm ul li:nth-child(3), 
+.newDalkomm ul li:nth-child(6), 
+.newDalkomm ul li:nth-child(8) {
    padding-top: 1.563vw;
 }
 .newDalkomm ul li:nth-child(even) {
@@ -449,7 +448,7 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
 .supporter a {
     font-weight: 700;
     display: inline-block;
-    border: 0.052vw solid;
+    border: 1px solid #F43B00;
     font-size: 1.250vw;
     padding: 1.042vw 2.500vw;
     margin-top: 2.083vw;
@@ -481,7 +480,7 @@ footer {
 .footer1 {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.052vw solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 1.823vw;
 }
 .footer1 img {
@@ -519,7 +518,7 @@ footer {
     transition: transform 0.7s ease-in-out;
 }
 .footer1 .service li .serviceDetail li a:hover {
-    color: rgb(34, 34, 34);
+    color: #222;
 }
 .footer1 .service li .serviceDetail li a:hover::before {
     transform: scale(1);
@@ -543,7 +542,7 @@ footer {
     font-weight: 700;
     font-size: 0.938vw;
     border: none;
-    border-bottom: 0.104vw solid #222;
+    border-bottom: 2px solid #222;
     background: url(./images/plus.svg) no-repeat 100% 50% / 1.250vw 1.250vw;
     appearance: none;
 }
@@ -573,7 +572,7 @@ footer {
     display: flex;
     align-items: center;
     padding: 0 1.667vw;
-    border: 0.052vw solid rgba(34, 34, 34, 0.1);
+    border: 1px solid rgba(34, 34, 34, 0.1);
     border-radius: 2.604vw;
     margin-right: 0.625vw;
 }

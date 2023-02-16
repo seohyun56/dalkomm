@@ -4,11 +4,14 @@ const as = document.querySelectorAll("a");
 const nav = document.querySelector("nav");
 const lastMenu = document.querySelector(".gnb > li:last-child");
 const gnbHover = document.querySelector("nav .gnbHover");
+// header
+const swiperContents = document.querySelector(".swiperContainer .Swiper .swiper-wrapper");
 // supporter
 const circle = document.querySelector(".supporter .mouseImg .circle");
 const circleBig = document.querySelector(".supporter .mouseImg .circleBig");
 const circleSmall = document.querySelector(".supporter .mouseImg .circleSmall");
 
+// scroll animation 호출
 AOS.init();
 
 // a 새로고침 방지
@@ -59,7 +62,7 @@ const mainSwiper = new Swiper('.mySwiper', {
       el: '.swiper-pagination',//패이지내이션 역할의 요소와 연결
     },
     autoplay: {
-      delay: 2000,
+      delay: 3000,
     }
 });
 

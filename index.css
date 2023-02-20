@@ -34,6 +34,9 @@ nav {
 nav.on {
     background-color: #FBF4E4;
 }
+nav h1 {
+    cursor: pointer;
+}
 nav .gnb {
     display: flex;
 }
@@ -281,6 +284,9 @@ header .swiper-pagination-bullets .swiper-pagination-bullet-active {
 .dalkommStory ul {
     display: flex;
     justify-content: space-between;
+}
+.dalkommStory ul li {
+    cursor: pointer;
 }
 .dalkommStory ul li .storyImg {
     width: 23.958vw; height: 23.958vw;
